@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gravesters
 
-## Available Scripts
+A project which attempts to make tracking the progression of Graves Disease, for people who are suffering from it.
 
-In the project directory, you can run:
+## About Graves Disease
+Graves disease is an **Auto-Immune** disorder where the Thyroid Gland starts producing an excessive amount of Thyroid Hormones,
+leading to toxicity.
+It is estimated that about **2 to 3%** of the population i.e roughly **10 million** people in the world suffer from it.
+Women are shown to have significantly higher risk of having Graves Disease.
 
-### `npm start`
+## How do I intend to help ?
+Auto-Immune disorders are usually chronic and require meticulous tracking of symptoms / Lab Reports, pills appointments etc over a course of
+several years in order to accurately fight the disease.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This website intends to start by providing the following features:
+1. Registration.
+2. Providing a dashboard to allow the following-
+    - Tracking Lab Reports.
+    - Provide visualizations in the form of Charts etc to better understand the progression.
+    - Allow users to enter historical data for reports / treatments / notes etc.
+    - Allow users to download reports concerning different areas of the disease.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+and more...
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Details
 
-### `npm run build`
+Frontend Built with [React](https://github.com/facebook/react) with [Redux](https://github.com/reduxjs/redux) and [redux-saga](https://github.com/redux-saga/redux-saga).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We also use the excellent component library [Grommet](https://github.com/grommet/grommet).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+We use the excellent **AWS Dynamo DB** as our backend.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[ ... to be continued ]
