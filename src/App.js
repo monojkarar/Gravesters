@@ -1,24 +1,19 @@
 import React from 'react';
-import { Grommet } from 'grommet';
 import theme from './theme';
+import { Grommet, Box } from 'grommet';
+import Welcome from 'components/Welcome';
+import AppBar from 'components/AppBar';
 
 function App() {
   return (
     // This will propagate in all child components.
-    <Grommet theme={theme}>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Grommet theme={theme} full={true}>
+      <Box fill={true}
+        direction='column'
+        align='center'
+      >
+        <AppBar />
+      </Box>
     </Grommet>
   );
 }

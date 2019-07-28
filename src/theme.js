@@ -1,9 +1,16 @@
 const theme = {
   global: {
     font: {
-      family: 'Roboto',
+      family: 'Roboto Slab',
       size: '14px',
       height: '20px',
+      weight: 'thin',
+    },
+    colors: {
+      brand: 'tomato',
+    },
+    hover: {
+      color: '#646F79'
     }
   }
 };
