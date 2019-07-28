@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { Heading, Box } from 'grommet';
+import { Heading, Box, Button } from 'grommet';
+import { Login } from 'grommet-icons';
 
 export class Welcome extends PureComponent {
   render() {
@@ -18,7 +19,7 @@ export class Welcome extends PureComponent {
 
     return (
       <Box direction='column' fill='horizontal' justify='center' align='center'>
-          <Heading level='2'>
+          <Heading level='2' margin={{bottom: 'small'}}>
               Let's fight Graves together !
           </Heading>
           <Box direction='row' fill='horizontal' justify='center' margin='none'>
@@ -28,6 +29,13 @@ export class Welcome extends PureComponent {
               </StyledPara>
             </StyledDiv>
           </Box>
+          <Button
+            label='Get Started Now'
+            margin='large'
+            primary
+            reverse
+            icon={<Login/>}
+          />
       </Box>
     )
   }

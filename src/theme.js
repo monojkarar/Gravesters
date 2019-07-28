@@ -6,12 +6,6 @@ const theme = {
       height: '20px',
       weight: 'thin',
     },
-    colors: {
-      brand: 'tomato',
-    },
-    hover: {
-      color: '#646F79'
-    }
   }
 };
 
