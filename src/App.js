@@ -13,6 +13,7 @@ function App() {
         align='center'
       >
         <AppBar />
+        <Welcome />
       </Box>
     </Grommet>
   );
