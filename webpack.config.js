@@ -20,16 +20,31 @@ module.exports = {
       }
     ]
   },
+  entry: {
+    main: './src/index.js',
+
+  },
+  output: {
+    publicPath: "/",
+    path: path.resolve(__dirname, 'dist'),
+    filename: "bundled.js",
+  },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html',
+      template: "./src/index.html",
     })
   ],
   resolve: {
     alias: {
-      components: path.resolve(__dirname, 'src/components'),
-      assets: path.resolve(__dirname, 'src/assets'),
+      components: path.resolve(__dirname, 'src', 'components/'),
+      containers: path.resolve(__dirname, 'src', 'containers/'),
+      assets: path.resolve(__dirname, 'src', 'assets/'),
+      api: path.resolve(__dirname, 'src', 'api/'),
+      actions: path.resolve(__dirname, 'src', 'actions/'),
+      constants: path.resolve(__dirname, 'src', 'constants/'),
+      reducers: path.resolve(__dirname, 'src', 'reducers/'),
+      sagas: path.resolve(__dirname, 'src', 'sagas/'),
+      store: path.resolve(__dirname, 'src', 'store/'),
     },
     extensions: ['.js', '.jsx', '.json'],
   }

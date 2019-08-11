@@ -6,6 +6,14 @@ const theme = {
       height: '20px',
       weight: 'thin',
     },
+    carousel: {
+      icons: {
+        previous: undefined,
+        next: undefined,
+        color: '#ffffff'
+
+      }
+    }
   }
 };
 

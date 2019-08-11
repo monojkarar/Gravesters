@@ -4,6 +4,10 @@ import { Heading, Box, Button } from 'grommet';
 import { Login } from 'grommet-icons';
 
 export class Welcome extends PureComponent {
+  showLoginLayer = () => {
+
+  }
+
   render() {
     const StyledDiv = styled.div`
       width: 80%;
@@ -35,6 +39,7 @@ export class Welcome extends PureComponent {
             primary
             reverse
             icon={<Login/>}
+            onClick={this.showLoginLayer}
           />
       </Box>
     )
