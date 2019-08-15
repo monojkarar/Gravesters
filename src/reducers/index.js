@@ -1,9 +1,10 @@
-import createReducer from 'reducers/createReducer';
-import initialState from './initialState';
+import { combineReducers } from 'redux';
+import loginReducer from 'reducers/loginReducer';
+
 
 // Combines all reducers to a single reducer function
-const rootReducer = createReducer(initialState.isLoginLayerOpen, (state, action) => {
-  return state;
-})
+const rootReducer = combineReducers({
+  login: loginReducer,
+});
 
 export default rootReducer;

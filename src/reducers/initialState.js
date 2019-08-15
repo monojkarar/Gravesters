@@ -1,5 +1,7 @@
 const initialState = {
-  isLoginLayerOpen: false,
+  login: {
+    isLoginLayerOpen: false,
+  }
 }
 
 export default initialState;

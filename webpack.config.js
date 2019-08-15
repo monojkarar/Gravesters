@@ -26,13 +26,16 @@ module.exports = {
   },
   output: {
     publicPath: "/",
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname),
     filename: "bundled.js",
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-    })
+    }),
   ],
   resolve: {
     alias: {

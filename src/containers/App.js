@@ -1,10 +1,7 @@
 import React from 'react';
 import theme from '../theme';
-import Routes from '../routes';
 import { Grommet, Box } from 'grommet';
-import Welcome from 'components/Welcome';
-import AppBar from 'components/AppBar';
-import Testimonials from 'components/Testimonials';
+import HomePage from 'containers/HomePage';
 
 function App() {
   return (
@@ -14,9 +11,7 @@ function App() {
         direction='column'
         align='center'
       >
-        <AppBar />
-        <Welcome />
-        <Testimonials/>
+        <HomePage path="/"/>
       </Box>
     </Grommet>
   );

@@ -1,4 +1,4 @@
-import LoginLayer from './LoginLayer';
+import LoginComponent from './LoginComponent';
 
-export default LoginLayer;
+export default LoginComponent;
 
