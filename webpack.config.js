@@ -48,6 +48,7 @@ module.exports = {
       reducers: path.resolve(__dirname, 'src', 'reducers/'),
       sagas: path.resolve(__dirname, 'src', 'sagas/'),
       store: path.resolve(__dirname, 'src', 'store/'),
+      common: path.resolve(__dirname, 'src', 'common/'),
     },
     extensions: ['.js', '.jsx', '.json'],
   }

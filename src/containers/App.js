@@ -3,7 +3,7 @@ import theme from '../theme';
 import { Grommet, Box } from 'grommet';
 import HomePage from 'containers/HomePage';
 
-function App() {
+function App({children}) {
   return (
     // This will propagate in all child components.
     <Grommet theme={theme} full={true}>
@@ -11,8 +11,9 @@ function App() {
         direction='column'
         align='center'
       >
-        <HomePage path="/"/>
+        <HomePage />
       </Box>
+      {children}
     </Grommet>
   );
 }
