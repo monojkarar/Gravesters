@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { Layer, Box, Heading } from 'grommet';
+import { Layer, Box, Heading, Button } from 'grommet';
 import GoogleLoginButton from './GoogleLoginButton';
 import FacebookLoginButton from './FacebookLoginButton';
+import { FormClose } from 'grommet-icons';
 
 
 export default class LoginComponent extends PureComponent {
@@ -28,7 +29,7 @@ export default class LoginComponent extends PureComponent {
         onEsc={() => this.setState({open: false})}
         onClickOutside={() => this.setState({open: false})}
         modal={true}
-        margin='large'
+        margin='small'
       >
         <Box
           pad='medium'
@@ -36,12 +37,32 @@ export default class LoginComponent extends PureComponent {
           width='large'
           align='center'
           justify='center'
+          wrap={false}
         >
-          <Heading level={3} margin='none' color='dark-3'>
+          <Heading level={3} margin={{
+            top: 'xsmall',
+            bottom: 'medium'
+          }} color='dark-3'>
             Login using your Social Accounts.
           </Heading>
+
           <GoogleLoginButton onSuccess={this.googleSigninResponse} onFailure={this.signinError} />
           <FacebookLoginButton onSuccess={this.facebookSigninResponse} onFailure={this.signinError} />
+          <Box
+            fill='horizontal'
+            margin={{
+              bottom: 'xsmall',
+              top: 'xsmall',
+              left: 'none',
+              right: 'none'
+            }}
+            pad='none'
+            align='center'
+            justify='end'
+            direction='row'
+          >
+            <Button label='Cancel' plain color='status-error' icon={<FormClose/>} reverse/>
+          </Box>
         </Box>
       </Layer>
     )
