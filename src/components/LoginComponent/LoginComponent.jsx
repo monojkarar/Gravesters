@@ -3,14 +3,10 @@ import { Layer, Box, Heading, Button } from 'grommet';
 import GoogleLoginButton from './GoogleLoginButton';
 import FacebookLoginButton from './FacebookLoginButton';
 import { FormClose } from 'grommet-icons';
+import { navigate } from '@reach/router';
 
 
 export default class LoginComponent extends PureComponent {
-  onSignIn = googleUser => {
-    console.log(googleUser);
-    alert(`Welcome ${googleUser.getBasicProfile().getName()}`);
-  }
-
   facebookSigninResponse = response => {
     console.log(response);
   }
@@ -23,11 +19,15 @@ export default class LoginComponent extends PureComponent {
     console.error(error);
   }
 
+  closeLoginModal = () => {
+    navigate('/');
+  }
+
   render() {
     return (
       <Layer
-        onEsc={() => this.setState({open: false})}
-        onClickOutside={() => this.setState({open: false})}
+        onEsc= {this.closeLoginModal}
+        onClickOutside={this.closeLoginModal}
         modal={true}
         margin='small'
       >
@@ -61,7 +61,14 @@ export default class LoginComponent extends PureComponent {
             justify='end'
             direction='row'
           >
-            <Button label='Cancel' plain color='status-error' icon={<FormClose/>} reverse/>
+            <Button
+              label='Cancel'
+              plain
+              color='status-error'
+              icon={<FormClose/>}
+              reverse
+              onClick={this.closeLoginModal}
+            />
           </Box>
         </Box>
       </Layer>
