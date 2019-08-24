@@ -6,11 +6,13 @@ const theme = {
       height: '20px',
       weight: 'thin',
     },
-    colors: {
-      brand: 'tomato',
-    },
-    hover: {
-      color: '#646F79'
+    carousel: {
+      icons: {
+        previous: undefined,
+        next: undefined,
+        color: '#ffffff'
+
+      }
     }
   }
 };
