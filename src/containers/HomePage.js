@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import AppBar from 'components/AppBar';
 import Welcome from 'components/Welcome';
-import Testimonials from 'components/Testimonials';
-import { connect } from 'react-redux';
 import { navigate } from '@reach/router';
+import React, { PureComponent } from 'react';
+import Testimonials from 'components/Testimonials';
 
 class HomePage extends PureComponent {
 
@@ -12,9 +12,10 @@ class HomePage extends PureComponent {
   }
 
   render() {
+    const { loginDetails } = this.props;
     return (
       <div>
-        <AppBar />
+        <AppBar loginDetails={loginDetails}/>
         <Welcome onGetStartedClicked={this.onGetStartedClicked}/>
         <Testimonials/>
       </div>
@@ -23,6 +24,7 @@ class HomePage extends PureComponent {
 }
 
 const mapStateToProps = state => ({
+  loginDetails: state.login,
 });
 
 const mapDispatchToProps = dispatch => ({

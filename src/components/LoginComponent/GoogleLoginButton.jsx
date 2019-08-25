@@ -9,8 +9,8 @@ const GoogleLoginButton = (props) => {
         <GoogleLogin
           clientId="902255523439-o198fosmh9lhhivukahoc424sru14mul.apps.googleusercontent.com"
           buttonText="Login using Google"
-          onSuccess={props.googleSigninResponse}
-          onFailure={props.signinError}
+          onSuccess={props.onSuccess}
+          onFailure={props.onFailure}
           cookiePolicy={'single_host_origin'}
           render= {renderProps => (
               <ColoredRectButton

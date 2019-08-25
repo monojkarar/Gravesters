@@ -1,13 +1,11 @@
 import { createReducer, updateObject } from 'reducers/utils';
-import Actions from 'actions/';
+import Actions from 'actions';
 import initialState from './initialState';
 
-const toggleLoginLayer = (prevLoginState, action) => updateObject(prevLoginState, {
-  isLoginLayerOpen: action.payload
-});
+const saveLoginInfo = (loginState, {payload}) => payload;
 
-const loginReducer = createReducer(initialState, {
-  [Actions.TOGGLE_LOGIN_LAYER]: toggleLoginLayer,
+const loginReducer = createReducer(initialState.login, {
+  [Actions.SAVE_LOGIN_INFO]: saveLoginInfo,
 });
 
 export default loginReducer;
