@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Anchor, Box, Heading, Image } from 'grommet';
+import LoginIndicator from 'components/LoginIndicator';
 
-export class AppBar extends PureComponent {
+class AppBar extends PureComponent {
   render() {
+    const { isLoggedIn, name, userID, picture } = this.props.loginDetails;
     return (
       <Box fill='horizontal'
         height='70px'
@@ -18,11 +20,23 @@ export class AppBar extends PureComponent {
           <Image src="/src/assets/logo-48x48.png" margin={{right: 'small'}} />
           <Heading level='2' weight='300' margin='none'>Gravesters</Heading>
         </Box>
-        <div>
-          <Anchor color='brand' label='About' />
-          <Anchor color='brand' label='Log in' margin={{left: 'small'}}/>
-          <Anchor color='brand' label='Become a member' margin={{left: 'small'}} />
-        </div>
+        <Box
+          fill
+          direction='row'
+          margin='x-small'
+          pad='small'
+          justify='end'
+          align='center'
+        >
+          { !isLoggedIn && <Anchor color='brand' label='About' /> }
+          <LoginIndicator
+            isLoggedIn={isLoggedIn}
+            loginName={name}
+            loginPicture={picture}
+            userID={userID}
+          />
+          { !isLoggedIn && <Anchor color='brand' label='Become a member' margin={{left: 'small'}} />}
+        </Box>
       </Box>
     )
   }
